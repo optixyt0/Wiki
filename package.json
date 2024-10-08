@@ -1,23 +1,20 @@
 {
-  "name": "wiki",
-  "module": "index.ts",
+  "name": "athena",
+  "version": "0.0.1",
+  "description": "Athena wiki",
+  "license": "MIT",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "docs:build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "docs:dev": "vuepress dev docs",
+    "docs:update-package": "pnpm dlx vp-update"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "next": "^14.2.14",
-    "nextra": "^3.0.7",
-    "nextra-theme-docs": "^3.0.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+  "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-rc.7",
+    "@vuepress/theme-default": "^2.0.0-rc.11",
+    "sass": "^1.79.4",
+    "vue": "^3.4.0",
+    "vuepress": "^2.0.0-rc.7"
   }
 }
