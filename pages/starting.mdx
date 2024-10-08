@@ -1,0 +1,30 @@
+# Starting your backend
+
+## Initialising your project:
+1. Open a terminal window, depending on your OS (such as Windows, which has CMD), and go to a new folder. It can be anywhere.
+2. Make sure you have [Node.js](https://nodejs.org/en) installed, and run the command ``` npm i ```, which will initialise your project. Add in the details you want, like the name. Everything but the name is optional.
+3. Open up a code editor such as [Visual Studio Code](https://code.visualstudio.com/), and open your project folder.
+4. Create a new file called ``` index.js ``` and add the following code:
+  ```
+  const express = require("express");
+const app = express();
+
+
+
+const PORT = 3551;
+
+
+
+app.listen(PORT, async() => {
+    console.log(`Backend started listening on port ${PORT}.`);
+}).on("error", async (err) => {
+    if (err.code == "EADDRINUSE") {
+        log.error(`Port ${PORT} is already in use!\nClosing in 3 seconds...`);
+        await functions.sleep(3000)
+        process.exit(0);
+    } else throw err;
+});
+}
+
+  ```
+5. You have now began developing your backend!
