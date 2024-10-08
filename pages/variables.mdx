@@ -1,0 +1,29 @@
+# Adding environment variables
+
+1. Reopen your terminal window back to your project folder.
+2. Run the command ``` npm install dotenv ```, which will install the dotenv package.
+3. Go to your index.js file and change it to the following
+  ```
+  const express = require("express");
+const app = express();
+require("dotenv").config();
+
+
+
+const PORT = process.env.PORT || 3551;
+
+
+
+app.listen(PORT, async() => {
+    console.log(`Backend started listening on port ${PORT}.`);
+}).on("error", async (err) => {
+    if (err.code == "EADDRINUSE") {
+        log.error(`Port ${PORT} is already in use!\nClosing in 3 seconds...`);
+        await functions.sleep(3000)
+        process.exit(0);
+    } else throw err;
+});
+}
+
+  ```
+5. Create a file called .env in your project directory and add the following line of text, you can change the port to whatever you want: ``` PORT=3551 ```
