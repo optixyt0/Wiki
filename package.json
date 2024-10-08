@@ -1,0 +1,23 @@
+{
+  "name": "wiki",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "next": "^14.2.14",
+    "nextra": "^3.0.7",
+    "nextra-theme-docs": "^3.0.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
